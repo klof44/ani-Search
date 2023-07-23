@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "ani! Search",
+    "version": "1.0",
+  
+    "description": "Find anime related to an osu! beatmap",
+  
+    "icons": {
+      "96": "icons/icon-96.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://osu.ppy.sh/*"],
+        "js": ["ani!Search.js"],
+        "run_at": "document_end"
+      }
+    ],
+
+    "permissions": [
+      "webRequest",
+      "https://graphql.anilist.co/",
+      "https://api.chimu.moe/v1/*"
+    ]
+}
+  
