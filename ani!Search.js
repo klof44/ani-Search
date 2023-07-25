@@ -4,7 +4,6 @@ setInterval(() => {
   if (currUrl != prevUrl) {
     Main();
     prevUrl = currUrl;
-	console.log("URL changed");
   }
 }, 100);
 
