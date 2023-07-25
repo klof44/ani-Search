@@ -1,20 +1,20 @@
-let prevUrl = undefined;
+let noMoreForURL = undefined;
 setInterval(() => {
-  const currUrl = window.location.href;
-  if (currUrl != prevUrl) {
-    Main();
-    prevUrl = currUrl;
-  }
+  	if (!document.location.href.includes("https://osu.ppy.sh/beatmapsets/") || document.getElementsByClassName("ani!Search-container").length > 0 || noMoreForURL == document.location.href) return;
+
+	Main();
 }, 100);
 
-
 async function Main() {
-	if (!document.location.href.includes("https://osu.ppy.sh/beatmapsets/") || document.getElementsByClassName("ani!Search-container").length > 0) return;
+	if (document.getElementsByClassName("osu-page osu-page--generic-compact").length == 0) return;
 	
-	osuPageInsert = document.getElementsByClassName("osu-page osu-page--generic-compact")[0].insertBefore(
-		document.createElement("div"),
-		document.getElementsByClassName("osu-page osu-page--generic-compact")[0]
-		.childNodes[2]
+	osuPageInsert = document.createElement("div");
+	osuPageInsert.className = "ani!Search-container";
+	osuPageInsert.style = "padding-bottom: 0;";
+	
+	document.getElementsByClassName("osu-page osu-page--generic-compact")[0].insertBefore(
+		osuPageInsert,
+		document.getElementsByClassName("osu-page osu-page--generic-compact")[0].childNodes[2]
 	);
 
 	let beatmapResponse = await fetch(`https://api.chimu.moe/v1/set/${document.URL.split("/")[4].split("#")[0]}`, {
@@ -27,7 +27,10 @@ async function Main() {
     .then((response) => response.json())
 
     .catch((error) => console.error(error));
-	if (beatmapResponse.Source == null || !beatmapResponse.Tags.match(/\bop\b|\banime\b|\bopening\b|\bending\b/)) return;
+	if (beatmapResponse.Source == null || !beatmapResponse.Tags.match(/\bop\b|\banime\b|\bopening\b|\bending\b/)) {
+		noMoreForURL = document.location.href;
+		return;
+	}
 
 	var variables = {
 		search: beatmapResponse.Source,
