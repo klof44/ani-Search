@@ -27,7 +27,7 @@ async function Main() {
     .then((response) => response.json())
 
     .catch((error) => console.error(error));
-	if (beatmapResponse.Source == null || !beatmapResponse.Tags.match(/\bop\b|\banime\b|\bopening\b|\bending\b/)) {
+	if (beatmapResponse.Source == null || !beatmapResponse.Tags.match(/\bop\b|\banime\b|\bopening\b|\bending\b|\btv size\b/)) {
 		noMoreForURL = document.location.href;
 		return;
 	}

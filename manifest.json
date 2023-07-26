@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "ani!Search",
-    "version": "1.2",
+    "version": "1.2.1",
   
     "description": "Displays info on the anime that an osu! beatmap is from",
   
