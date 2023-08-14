@@ -97,7 +97,7 @@ async function Main() {
 			<div class="ani!Search-content" style="padding: 10px; display: flex; position: relative; text-shadow: 0 1px 3px rgba(0,0,0,.75);">
 				<a href="https://anilist.co/anime/${aniListMedia.id}/" target="_blank"><img src="${aniListMedia.coverImage.large}" height=140></a>
 				<div class="ani!Search-text" style="padding-left: 10px;">
-					<a href="https://anilist.co/anime/${aniListMedia.id}/" style="font-size: 25px; text-decoration: none; color: white;">${aniListMedia.title.english ?? aniListMedia.title.romaji}</a></br>
+					<a href="https://anilist.co/anime/${aniListMedia.id}/" target="_blank" style="font-size: 25px; text-decoration: none; color: white;">${aniListMedia.title.english ?? aniListMedia.title.romaji}</a></br>
 					<p style="margin-bottom: 2px;">${aniListMedia.startDate.year}</p>
 					<p style="margin-bottom: 2px;">Avg. Rating: ${aniListData.Recommendation.rating}/100</p>
 					<p style="margin-bottom: 2px;">Tags: ${tagString}</p>
