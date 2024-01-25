@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "ani!Search",
-    "version": "1.2.1",
+    "version": "1.3.1",
   
     "description": "Displays info on the anime that an osu! beatmap is from",
   
@@ -19,8 +19,7 @@
 
     "permissions": [
       "webRequest",
-      "https://graphql.anilist.co/",
-      "https://api.chimu.moe/v1/*"
+      "https://graphql.anilist.co/"
     ]
 }
   
