@@ -1,24 +1,27 @@
 {
-    "manifest_version": 3,
-    "name": "ani!Search",
-    "version": "1.3.1",
-  
-    "description": "Displays info on the anime that an osu! beatmap is from",
-  
-    "icons": {
-      "96": "icons/icon-96.png"
-    },
-  
-    "content_scripts": [
-      {
-        "matches": ["*://osu.ppy.sh/*"],
-        "js": ["ani!Search.js"],
-        "run_at": "document_end"
-      }
-    ],
+  "manifest_version": 3,
+  "name": "ani!Search",
+  "version": "1.3.2",
 
-    "permissions": [
-      "webRequest"
-    ]
+  "description": "Displays info on the anime that an osu! beatmap is from",
+
+  "icons": {
+    "96": "icons/icon-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://osu.ppy.sh/*"],
+      "js": ["ani!Search.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": ["webRequest"],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{600f1914-774f-4cd5-ac93-261a1949369a}"
+    }
+  }
 }
-  
