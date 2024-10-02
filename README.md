@@ -6,7 +6,7 @@ Adds an extra section under the osu! beatmap info with information regarding the
 This extension uses [anilist.co](https://anilist.co/) to display information such as the title, cover art, year of release, average rating and tags.  
 
 ## Download  
-![Mozilla Add-on Version](https://img.shields.io/amo/v/ani-search?logo=firefox&color=%23E66000)  
+[![Mozilla Add-on Version](https://img.shields.io/amo/v/ani-search?logo=firefox&color=%23E66000)](https://addons.mozilla.org/en-CA/firefox/addon/ani-search/)
   
-![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/iclelpgjekoggjdokpmebjgeckeaggaa?logo=googlechrome&color=%234c8bf5)
+[![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/iclelpgjekoggjdokpmebjgeckeaggaa?logo=googlechrome&color=%234c8bf5)](https://chromewebstore.google.com/detail/ani-search/iclelpgjekoggjdokpmebjgeckeaggaa)
   
